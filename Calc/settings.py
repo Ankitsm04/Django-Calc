@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'azure_content.apps.BaseConfig',
+    'base.apps.BaseConfig',
 ]
 
 MIDDLEWARE = [
@@ -119,8 +119,8 @@ USE_TZ = True
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_DIRS = (str(BASE_DIR.joinpath('azure_content/static')),)
-STATIC_URL = '/azure_content/static/'
+STATICFILES_DIRS = (str(BASE_DIR.joinpath('base/static')),)
+STATIC_URL = '/base/static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
