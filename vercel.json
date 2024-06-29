@@ -1,13 +1,17 @@
 {
-    "builds": [{
+    "builds": [
+      {
         "src": "Calc/wsgi.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
-    }],
+      }
+    ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "Calc/wsgi.py"
-        }
-    ]
-}
+      {
+        "src": "/(.*)",
+        "dest": "Calc/wsgi.py"
+      }
+    ],
+    "buildCommand": "sh build.sh"
+  }
+  
