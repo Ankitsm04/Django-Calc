@@ -6,3 +6,4 @@ settings_module = 'Calc.deployement' if 'WEBSITE_HOSTNAME' in os.environ else 'C
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings_module)
 
 application = get_wsgi_application()
+app = application
